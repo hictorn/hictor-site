@@ -21,46 +21,42 @@ body { margin: 0; }
   letter-spacing: -.025em;
   text-align: left;
 }
-.profile-intro h1 {
+.profile-intro h1,
+.profile-intro p {
   margin: 0;
   font: inherit;
   letter-spacing: inherit;
   color: inherit;
 }
-.profile-intro .hn-identity {
+.profile-intro .hn-identity,
+.profile-intro .hn-link {
   position: relative;
   display: inline-block;
-  padding-inline-start: calc(1em + var(--hn-icon-gap));
   vertical-align: baseline;
+}
+.profile-intro .hn-identity {
+  padding-inline-start: calc(1em + var(--hn-icon-gap));
   color: #fafafa;
   white-space: nowrap;
 }
-.profile-intro .hn-socials {
-  display: flex;
-  justify-content: center;
-}
 .profile-intro .hn-link {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
+  margin-inline-start: var(--hn-icon-gap);
+  width: 1em;
+  text-decoration: none;
+}
+.profile-intro .hn-link::before {
+  content: "\200b";
 }
 .profile-intro .hn-icon {
-  position: relative;
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  translate: 0 -50%;
   display: grid;
   place-items: center;
   width: 1em;
   height: 1em;
   line-height: 1;
-}
-.profile-intro .hn-identity .hn-icon {
-  position: absolute;
-  inset-inline-start: 0;
-  top: 50%;
-  translate: 0 -50%;
-}
-.profile-intro .hn-link .hn-icon {
-  pointer-events: none;
 }
 .profile-intro .hn-instagram {
   position: absolute;
