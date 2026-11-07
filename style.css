@@ -17,7 +17,7 @@ body { margin: 0; }
   --hn-icon-gap: .18em;
   max-width: 100%;
   color: #a1a1aa;
-  font: 500 clamp(18px, 3.4vw, 30px)/1.65 system-ui, sans-serif;
+  font: 500 clamp(18px, 5.6vw, 30px)/1.65 system-ui, sans-serif;
   letter-spacing: -.025em;
   text-align: left;
 }
