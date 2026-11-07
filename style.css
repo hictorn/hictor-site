@@ -28,6 +28,9 @@ body { margin: 0; }
   letter-spacing: inherit;
   color: inherit;
 }
+.profile-intro .hn-social-line {
+  white-space: nowrap;
+}
 .profile-intro .hn-identity,
 .profile-intro .hn-link {
   position: relative;
