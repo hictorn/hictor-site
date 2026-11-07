@@ -21,38 +21,46 @@ body { margin: 0; }
   letter-spacing: -.025em;
   text-align: left;
 }
-.profile-intro h1,
-.profile-intro p {
+.profile-intro h1 {
   margin: 0;
   font: inherit;
   letter-spacing: inherit;
   color: inherit;
 }
-.profile-intro .hn-identity,
-.profile-intro .hn-link {
+.profile-intro .hn-identity {
   position: relative;
   display: inline-block;
   padding-inline-start: calc(1em + var(--hn-icon-gap));
   vertical-align: baseline;
-  color: inherit;
-  font: inherit;
-  white-space: nowrap;
-  text-decoration: none;
-}
-.profile-intro .hn-identity,
-.profile-intro .hn-instagram-link {
   color: #fafafa;
+  white-space: nowrap;
+}
+.profile-intro .hn-socials {
+  display: flex;
+  justify-content: center;
+}
+.profile-intro .hn-link {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
 }
 .profile-intro .hn-icon {
-  position: absolute;
-  inset-inline-start: 0;
-  top: 50%;
-  translate: 0 -50%;
+  position: relative;
   display: grid;
   place-items: center;
   width: 1em;
   height: 1em;
   line-height: 1;
+}
+.profile-intro .hn-identity .hn-icon {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  translate: 0 -50%;
+}
+.profile-intro .hn-link .hn-icon {
+  pointer-events: none;
 }
 .profile-intro .hn-instagram {
   position: absolute;
@@ -63,17 +71,6 @@ body { margin: 0; }
   max-width: none;
   height: auto;
   display: block;
-}
-.profile-intro .hn-x-group {
-  white-space: nowrap;
-}
-.profile-intro .hn-x-link {
-  margin-inline-start: var(--hn-icon-gap);
-  padding-inline-start: 0;
-  width: 1em;
-}
-.profile-intro .hn-x-link::before {
-  content: "\200b";
 }
 .profile-intro .hn-x-mark {
   position: relative;
@@ -116,7 +113,7 @@ body { margin: 0; }
 .profile-intro .hn-icon {
   transition: transform 180ms ease;
 }
-.profile-intro :is(.hn-link, .hn-identity):is(:hover, :focus-visible) .hn-label {
+.profile-intro .hn-identity:hover .hn-label {
   transform: translateY(-2px);
 }
 .profile-intro :is(.hn-link, .hn-identity):is(:hover, :focus-visible) .hn-icon {
